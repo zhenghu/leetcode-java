@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by hz on 11/8/2015.
+ * LeetCode ThreeSum Solution
  */
 public class ThreeSum {
     public List<List<Integer>> threesum(int[] inputArray) {
