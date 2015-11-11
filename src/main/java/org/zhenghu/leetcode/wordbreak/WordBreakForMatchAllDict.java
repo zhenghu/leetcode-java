@@ -48,10 +48,8 @@ public class WordBreakForMatchAllDict {
     }
 
     private String makeSentence(Integer lenOfInput, WordWithIndex firstWordWithIndex, List<WordWithIndex> indexes) {
-        String sentences;
-        String words;
-        sentences = firstWordWithIndex.getWord() + " ";
-        words = firstWordWithIndex.getWord();
+        String sentences = firstWordWithIndex.getWord() + " ";
+        String words = firstWordWithIndex.getWord();
         List<WordWithIndex> next = getNextWord(firstWordWithIndex.getWord(), indexes);
 
         if (next.isEmpty()) {
