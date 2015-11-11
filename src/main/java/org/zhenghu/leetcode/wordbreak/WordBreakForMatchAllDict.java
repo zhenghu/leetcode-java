@@ -91,24 +91,5 @@ public class WordBreakForMatchAllDict {
     private List<WordWithIndex> getNextWord(String words, List<WordWithIndex> indexes) {
         return indexes.stream().filter(i -> i.getIndex() == words.length()).collect(Collectors.toList());
     }
-
-
-    public class WordWithIndex {
-        private String word;
-        private Integer index;
-
-        public WordWithIndex(String word, Integer index) {
-            this.word = word;
-            this.index = index;
-        }
-
-        public String getWord() {
-            return this.word;
-        }
-
-        public Integer getIndex() {
-            return this.index;
-        }
-    }
 }
 
