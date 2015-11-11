@@ -4,24 +4,21 @@ import com.googlecode.zohhak.api.TestWith;
 import com.googlecode.zohhak.api.runners.ZohhakRunner;
 import org.fest.assertions.api.Assertions;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
-
 /**
- * Created by hz on 11/10/2015.
+ * test
  */
 @RunWith(ZohhakRunner.class)
-public class WordBreakTest {
+public class WordBreakForMatchAllDictTest {
 
-    WordBreak wordBreak;
+    WordBreakForMatchAllDict wordBreakForMatchAllDict;
 
     @Before
     public void setUp() throws Exception {
-        this.wordBreak = new WordBreak();
+        this.wordBreakForMatchAllDict = new WordBreakForMatchAllDict();
     }
 
     @TestWith({
@@ -30,7 +27,9 @@ public class WordBreakTest {
             "a,a,a",
             "a, ,a",
             "a,b,",
-            "abcd,a abc b cd,a b cd"
+            "abcd,a abc b cd,a b cd",
+            "aaaaaaa,aaaa aaa,aaa aaaa@aaaa aaa",
+            "aaaaaaa,aaaa aa a,aa a aaaa@a aa aaaa@aaaa aa a"
 
     })
     public void testWordBreak(String s, String dictS, String output) throws Exception {
@@ -44,7 +43,7 @@ public class WordBreakTest {
 
 
         // When
-        List<String> actual = this.wordBreak.wordBreak(s, dict);
+        List<String> actual = this.wordBreakForMatchAllDict.wordBreak(s, dict);
 
         //Then
         Assertions.assertThat(actual).isEqualTo(expected);
