@@ -21,7 +21,9 @@ public class HappyNumberTest {
 	}
 
 	@TestWith({
-			"19,true"
+			"19,true",
+			"2,false",
+			"9,false"
 	})
 	public void testIsHappy(int input, boolean expected) throws Exception {
 		// Given
