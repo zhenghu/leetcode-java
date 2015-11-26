@@ -19,6 +19,4 @@ public class WordWithIndex {
     public Integer getIndex() {
         return this.index;
     }
-
-    //sfsdfsdfsd
 }
